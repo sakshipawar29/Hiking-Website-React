@@ -1,0 +1,929 @@
+html{
+    scroll-behavior:smooth;
+}
+
+/*GLOBAL STYLES*/
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f3f3f3;
+    overflow-x:hidden;
+}
+
+
+/*PAGE 1 - HIKING BANNER*/
+
+.banner{
+    width:100%;
+    height:715px;
+    background:#1f262f;
+    position:relative;
+    overflow:hidden;
+}
+
+nav{
+    width:100%;
+    padding:20px 50px;
+    position:relative;
+    z-index:1000;
+}
+
+.logo{
+    float:left;
+}
+
+.logo span{
+    color:rgb(0, 255, 234)
+}
+
+.logo img{
+    height:70px;
+    width:auto;
+}
+
+nav ul{
+    list-style:none;
+    margin-top:20px;
+}
+
+nav ul li{
+    display:inline-block;
+    margin-left:30px;
+    padding-left:20px;
+}
+
+.logo-text{
+    color:#0cc4df;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+}
+
+nav button{
+    background:none;
+    border:none;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+nav button:hover{
+    color:#00d9ff;
+}
+
+.banner-content{
+    position:absolute;
+    top:180px;
+    left:70px;
+    color:white;
+    z-index:10;
+}
+
+.banner-content h1{
+    font-size:70px;
+    line-height:1.1;
+    font-family:Georgia, serif;
+    margin-bottom:20px;
+}
+
+.banner-content h3{
+    font-size:22px;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+.banner-content p{
+    font-size:24px;
+    line-height:1.5;
+}
+
+.image-box{
+    position:absolute;
+    bottom:0;
+    right:-150px;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+}
+
+.image-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    clip-path:polygon(
+        90% 0,
+        100% 50%,
+        60% 100%,
+        10% 100%
+    );
+
+    border-left:8px solid #54c97d;
+    border-right:8px solid #54c97d;
+}
+
+.image-box::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:#54c97d;
+
+    clip-path:polygon(
+        90% 0,
+        100% 50%,
+        60% 100%,
+        10% 100%
+    );
+
+    transform:scale(1.02);
+}
+
+
+/* PAGE 2 - CAMPING */
+
+.camping-section{
+    width:100%;
+    min-height:100vh;
+    padding:60px 80px;
+    position:relative;
+    background:#f3f3f3;
+}
+
+.left-icons{
+    position:absolute;
+    left:30px;
+    top:60px;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.left-icons span{
+    color:#7df58a;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.heading{
+    margin-left:10px;
+}
+
+.heading h1{
+    font-size:55px;
+    font-weight:bold;
+    color:#111;
+    line-height:1.2;
+}
+
+.line{
+    width:110px;
+    height:8px;
+    background:#11d7f5;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+.cards{
+    margin-top:100px;
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-start;
+    gap:50px;
+}
+
+.card{
+    text-align:center;
+    max-width:300px;
+}
+
+.icon-box{
+    width:120px;
+    height:120px;
+    background:#081829;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto 30px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.icon-box i{
+    font-size:55px;
+    color:#00d9ff;
+}
+
+.card h3{
+    font-size:28px;
+    margin-bottom:20px;
+    color:#222;
+}
+
+.card p{
+    font-size:20px;
+    line-height:1.8;
+    color:#444;
+}
+
+
+/* PAGE 3 - ROCK CLIMBING */
+
+.rock-climbing-section{
+    width:100%;
+    background:#f8f8f8;
+    padding:50px 0;
+    font-family:'Special Elite', cursive;
+}
+
+.container{
+    width:1400px;
+    max-width:95%;
+    min-height:700px;
+    margin:auto;
+    position:relative;
+    background:#fafafa;
+}
+
+.left-section{
+    width:45%;
+    padding:50px 70px;
+}
+
+.main-title{
+    font-size:58px;
+    line-height:70px;
+    font-weight:bold;
+    letter-spacing:4px;
+    margin-bottom:70px;
+}
+
+.section-title{
+    font-size:32px;
+    margin-bottom:30px;
+    font-weight:bold;
+}
+
+.description{
+    width:520px;
+    max-width:100%;
+    font-size:22px;
+    line-height:1.8;
+    color:#555;
+}
+
+.blue-line{
+    width:620px;
+    max-width:100%;
+    height:5px;
+    background:#7cecff;
+    margin:40px 0;
+}
+
+.modules{
+    font-size:28px;
+    color:#555;
+    line-height:1.6;
+    margin-bottom:50px;
+}
+
+.info{
+    display:flex;
+    gap:100px;
+}
+
+.info h3{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.info p{
+    font-size:28px;
+    line-height:1.4;
+}
+
+.right-section{
+    position:absolute;
+    top:70px;
+    right:120px;
+}
+
+.circle-image{
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    overflow:hidden;
+}
+
+.circle-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.orange-text{
+    position:absolute;
+    top:430px;
+    left:50px;
+
+    width:350px;
+
+    font-family:'Caveat', cursive;
+    font-size:20px;
+    font-weight:1000;
+    line-height:1.05;
+
+    color:#ff5a00;
+    z-index:2;
+}
+
+.dots{
+    position:absolute;
+    right:70px;
+    top:390px;
+    color:#ff7a2f;
+    font-size:60px;
+}
+
+
+/*PAGE 4 - HERO SECTION*/
+
+.hero{
+    height:700px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+    url("/images/hiking2.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    margin-left:90px;
+    color:white;
+}
+
+.title{
+    font-family:'Caveat', cursive;
+    font-size:80px;
+    line-height:1;
+    margin-bottom:60px;
+    text-transform:uppercase;
+}
+
+.subtitle{
+    font-family:'Special Elite', cursive;
+    font-size:38px;
+    line-height:1.4;
+    margin-bottom:40px;
+    font-weight:bold;
+}
+
+.desc{
+    font-family:'Special Elite', cursive;
+    font-size:24px;
+    margin-bottom:40px;
+}
+
+.btn{
+    display:inline-block;
+
+    padding:15px 60px;
+
+    border:3px solid #00d9ff;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-family:'Special Elite', cursive;
+
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#00d9ff;
+    color:black;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+    .container{
+        height:auto;
+        padding-bottom:50px;
+    }
+
+    .right-section{
+        position:static;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin-top:30px;
+    }
+
+    .left-section{
+        width:100%;
+    }
+
+    .orange-text{
+        position:static;
+        text-align:center;
+        margin-top:30px;
+    }
+
+    .dots{
+        display:none;
+    }
+}
+
+@media(max-width:900px){
+
+    .camping-section{
+        padding:40px 20px;
+    }
+
+    .heading h1{
+        font-size:35px;
+    }
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
+        margin-top:70px;
+    }
+
+    .card{
+        margin-bottom:50px;
+    }
+}
+
+@media(max-width:768px){
+
+    .banner-content{
+        left:25px;
+        top:150px;
+    }
+
+    .banner-content h1{
+        font-size:42px;
+    }
+
+    .banner-content p{
+        font-size:18px;
+    }
+
+    .main-title{
+        font-size:40px;
+        line-height:50px;
+    }
+
+    .section-title{
+        font-size:24px;
+    }
+
+    .description{
+        font-size:18px;
+    }
+
+    .circle-image{
+        width:280px;
+        height:280px;
+    }
+
+    .info{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .hero-content{
+        margin-left:30px;
+        margin-right:20px;
+    }
+
+    .title{
+        font-size:45px;
+    }
+
+    .subtitle{
+        font-size:24px;
+    }
+
+    .desc{
+        font-size:18px;
+    }
+}
+
+/* MOUNTAIN */
+
+
+.mountaineering{
+    background:#071c2c;
+    color:white;
+
+    padding:80px 90px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    min-height:650px;
+}
+
+/* LEFT */
+
+.left-box{
+    width:40%;
+}
+
+.circle-img{
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+}
+
+.left-box h3{
+    margin-top:35px;
+    color:#00dfff;
+    font-family:'Permanent Marker', cursive;
+    font-size:28px;
+    line-height:1.3;
+}
+
+/* RIGHT */
+
+.right-box{
+    width:45%;
+}
+
+.right-box h1{
+    font-family:'Roboto Slab', serif;
+    font-size:58px;
+    font-weight:800;
+    line-height:1.1;
+    margin-bottom:50px;
+}
+
+.right-box h2{
+    font-family:'Roboto Slab', serif;
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+.right-box p{
+    font-size:20px;
+    line-height:1.8;
+    color:#f3f3f3;
+}
+
+.line{
+    width:100%;
+    height:2px;
+    background:#00dfff;
+    margin:35px 0;
+}
+
+.modules{
+    margin-bottom:35px;
+}
+
+.details{
+    display:flex;
+    gap:100px;
+
+    font-size:18px;
+    line-height:1.4;
+}
+
+.details strong{
+    font-size:22px;
+}
+
+
+/* QUOTE */
+
+.quote-section{
+    position:relative;
+    width:100%;
+    height:500px;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.bg-img{
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(8,20,35,0.45);
+}
+
+.quote-content{
+    position:relative;
+    z-index:2;
+
+    text-align:center;
+    color:#fff;
+}
+
+.quote-content p{
+    font-family:'Permanent Marker', cursive;
+    font-size:22px;
+    line-height:1.8;
+    letter-spacing:1px;
+
+    margin-bottom:25px;
+}
+
+.logo-area{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+.logo-area img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+}
+
+.logo-area h4{
+    margin-top:5px;
+
+    color:#00d9ff;
+    font-size:14px;
+    letter-spacing:2px;
+    font-weight:normal;
+}
+
+.btn{
+    display:inline-block;
+
+    padding:8px 30px;
+
+    border:1px solid #00d9ff;
+
+    color:#fff;
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#00d9ff;
+    color:#000;
+}
+
+/* FOOTER */
+.footer{
+    background:#ffffff;
+    padding:70px 100px 40px;
+    border-bottom:8px solid #00dff7;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+}
+
+.footer-about{
+    width:45%;
+}
+
+.footer-about h3,
+.footer-links h3{
+    font-size:22px;
+    margin-bottom:20px;
+    color:#222;
+}
+
+.footer-about p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.footer-logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.footer-logo img{
+    width:60px;
+    height:60px;
+}
+
+.footer-logo span{
+    font-size:28px;
+    font-weight:bold;
+    color:#00dff7;
+}
+
+.footer-links ul{
+    list-style:none;
+}
+
+.footer-links ul li{
+    margin-bottom:12px;
+    color:#555;
+    cursor:pointer;
+}
+
+/* AUTUMN */
+.places{
+    background:#f3f3f3;
+    padding:80px 0;
+}
+
+.container{
+    width:85%;
+    margin:auto;
+}
+
+.places h2{
+    font-size:50px;
+    font-weight:800;
+    color:#1c2630;
+    line-height:1.2;
+    margin-bottom:70px;
+    font-family:Georgia, serif;
+}
+
+.places-wrapper{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.place-card{
+    text-align:left;
+}
+
+.place-card img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.dots{
+    margin:15px 0;
+}
+
+.dots span{
+    display:block;
+    width:5px;
+    height:5px;
+    background:#00dfff;
+    border-radius:50%;
+    margin-bottom:4px;
+}
+
+.place-card h3{
+    font-size:40px;
+    color:#1d2731;
+    margin-bottom:15px;
+    font-family:Georgia, serif;
+}
+
+.place-card p{
+    font-size:22px;
+    color:#444;
+    line-height:1.5;
+}
+
+.line{
+    width:100%;
+    height:2px;
+    background:#cdb7d9;
+    margin:25px 0;
+}
+
+.place-card h4{
+    font-size:22px;
+    color:#1d2731;
+}
+
+.place-card h4 span{
+    font-weight:normal;
+}
+
+.btn{
+    display:block;
+    width:120px;
+    margin:60px auto 0;
+    text-align:center;
+    padding:10px;
+    border:1px solid #00dfff;
+    text-decoration:none;
+    color:#222;
+}
+
+
+/* nature section */
+
+
+.nature-section{
+    position:relative;
+    background:#081c2c;
+    height:700px;
+    overflow:hidden;
+}
+
+.content{
+    position:absolute;
+    left:100px;
+    top:90px;
+    z-index:5;
+}
+
+.content h2{
+    font-family:'Permanent Marker', cursive;
+    color:#ff5b00;
+    font-size:55px;
+    line-height:1.2;
+    margin-bottom:40px;
+}
+
+.content h3{
+    color:#fff;
+    font-size:50px;
+    margin-bottom:30px;
+    font-family:Georgia, serif;
+}
+
+.content p{
+    color:#fff;
+    font-size:22px;
+    line-height:2;
+}
+
+.diagonal-image{
+    position:absolute;
+    width:1400px;
+    height:450px;
+
+    bottom:-90px;
+    right:-180px;
+
+    overflow:hidden;
+
+    transform:rotate(-30deg);
+
+    border-top:12px solid #ff5b00;
+    border-bottom:12px solid #ff5b00;
+}
+
+.diagonal-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transform:rotate(30deg) scale(1.45);
+}
