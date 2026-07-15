@@ -389,17 +389,11 @@ nav ul li a{
 
 .btn{
     display:inline-block;
-
     padding:15px 60px;
-
-    border:3px solid #00d9ff;
-
+    border:3px solid hsl(189, 100%, 50%);
     color:white;
-
     text-decoration:none;
-
     font-family:'Special Elite', cursive;
-
     transition:0.3s;
 }
 
@@ -904,4 +898,114 @@ nav ul li a{
     object-fit:cover;
 
     transform:rotate(30deg) scale(1.45);
+}
+
+/* Contact Modal */
+
+.modal-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.7);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.contact-card{
+
+    width:450px;
+    background:#ffffff;
+    border-radius:20px;
+    padding:35px;
+    position:relative;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+    animation:popup .3s ease;
+}
+
+@keyframes popup{
+
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.contact-card h2{
+
+    text-align:center;
+    margin-bottom:8px;
+    color:#1f2937;
+}
+
+.contact-card p{
+
+    text-align:center;
+    color:#777;
+    margin-bottom:25px;
+}
+
+.contact-card form{
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-card input,
+.contact-card textarea{
+
+    width:100%;
+    padding:14px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    outline:none;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus{
+
+    border-color:#ff7a00;
+}
+
+.contact-card button{
+
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#ff7a00;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-card button:hover{
+
+    background:#e56700;
+}
+
+.close-btn{
+
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:26px;
+    cursor:pointer;
+    color:#666;
+}
+
+.close-btn:hover{
+
+    color:red;
 }
